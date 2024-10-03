@@ -8,6 +8,16 @@
 
 result = ""
 for myNumber in range(32):
-  result = str(result) + str(myNumber) + "\n"
+  if myNumber == 0:  # Skips 0 explicitly
+        continue
+  if myNumber % 3 == 0 and myNumber % 5 == 0:
+    print("FizzBuzz")
+  elif myNumber % 3 == 0:
+    print("Fizz")
+  elif myNumber % 5 == 0:
+    print("Buzz")
+  else:
+    print(myNumber)
+    
+  result += str(myNumber) + "\n"
 
-print(result)
